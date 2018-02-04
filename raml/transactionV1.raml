@@ -1,0 +1,33 @@
+#%RAML 1.0
+title: Transaction API
+baseUri: https://api.flybit.com/{version}
+version: v1
+
+types:
+  transaction: !include schemas/transaction.json
+
+/blocks:
+  description: Collection endpoint for transactions.
+  is: []
+  get:
+    is: []
+    description: Search transactions on the specified query parameters.
+  /{id}:
+    description: Endpoints for individual transaction.
+    is: []
+    uriParameters:
+      id:
+        displayName: id
+        description: The id of the transaction.
+        type: string
+        maxLength: 64
+        required: true
+    get:
+      description: Retrieve the requested transaction.
+      is: []
+      responses:
+        200:
+          description: Successfully retrieved the requested transaction.
+          body:
+            application/json:
+              type: transaction

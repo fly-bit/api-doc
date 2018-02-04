@@ -1,0 +1,33 @@
+#%RAML 1.0
+title: Block API
+baseUri: https://api.flybit.com/{version}
+version: v1
+
+types:
+  block: !include schemas/block.json
+
+/blocks:
+  description: Collection endpoint for blocks.
+  is: []
+  get:
+    is: []
+    description: Search blocks on the specified query parameters.
+  /{id}:
+    description: Endpoints for individual block.
+    is: []
+    uriParameters:
+      id:
+        displayName: id
+        description: The id of the block.
+        type: string
+        maxLength: 64
+        required: true
+    get:
+      description: Retrieve the requested block.
+      is: []
+      responses:
+        200:
+          description: Successfully retrieved the requested block.
+          body:
+            application/json:
+              type: block

@@ -1,0 +1,76 @@
+{
+  "id": "http://api.flybit.com/schema/block",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "description": "Schema representing a block resource.",
+  "extends": {
+    "$ref": "http://api.flybit.com/schema/entity#"
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "id of the block.",
+      "required": true,
+      "maxLength": 64
+    },
+    "previousBlockId": {
+      "type": "string",
+      "description": "previous block id.",
+      "maxLength": 64
+    },
+    "totalFee": {
+      "type": "number",
+      "description": "total fee."
+    },
+    "previousBlockHash": {
+      "type": "array",
+      "description": "total fee."
+    },
+    "blockVersion": {
+      "type": "integer",
+      "description": "block version.",
+      "required": true
+    },
+    "height": {
+      "type": "number",
+      "description": "height.",
+      "required": true
+    },
+    "generationSignature": {
+      "type": "array",
+      "description": "generation signature.",
+      "required": true
+    },
+    "blockSignature": {
+      "type": "array",
+      "description": "block signature.",
+      "required": true
+    },
+    "payloadHash": {
+      "type": "array",
+      "description": "payload hash.",
+      "required": true
+    },
+    "generatorId": {
+      "type": "string",
+      "description": "generator id.",
+      "required": true,
+      "maxLength": 64
+    },
+    "cumulativeDifficulty": {
+      "type": "number",
+      "description": "cumulative difficulty.",
+      "required": true
+    },
+    "creationInstant": {
+      "type": "number",
+      "description": "creation instant.",
+      "required": true
+    },
+    "transactionNum": {
+      "type": "integer",
+      "description": "transaction number.",
+      "required": true
+    }
+  }
+}

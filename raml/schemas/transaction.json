@@ -1,0 +1,98 @@
+{
+  "id": "http://api.flybit.com/schema/transaction",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "description": "Schema representing a transaction resource.",
+  "extends": {
+    "$ref": "http://api.flybit.com/schema/entity#"
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "id of the transaction.",
+      "required": true,
+      "maxLength": 64
+    },
+    "blockId": {
+      "type": "string",
+      "description": "block id.",
+      "required": true,
+      "maxLength": 64
+    },
+    "senderId": {
+      "type": "string",
+      "description": "sender id.",
+      "required": true,
+      "maxLength": 64
+    },
+    "recipientId": {
+      "type": "string",
+      "description": "recipient id.",
+      "maxLength": 64
+    },
+    "handlerId": {
+      "type": "string",
+      "description": "handler id.",
+      "maxLength": 64
+    },
+    "expirationInstant": {
+      "type": "number",
+      "description": "expiration instant.",
+      "required": true
+    },
+    "amount": {
+      "type": "number",
+      "description": "amount.",
+      "required": true
+    },
+    "fee": {
+      "type": "integer",
+      "description": "fee.",
+      "required": true
+    },
+    "transactionVersion": {
+      "type": "integer",
+      "description": "transaction version.",
+      "required": true
+    },
+    "hash": {
+      "type": "array",
+      "description": "hash.",
+      "required": true
+    },
+    "signature": {
+      "type": "array",
+      "description": "signature.",
+      "required": true
+    },
+    "blockHeight": {
+      "type": "array",
+      "description": "block height.",
+      "required": true
+    },
+    "transactionType": {
+      "type": "number",
+      "description": "transaction type.",
+      "required": true
+    },
+    "transactionIndex": {
+      "type": "integer",
+      "description": "transaction index.",
+      "required": true
+    },
+    "hasMessage": {
+      "type": "boolean",
+      "description": "a flag to indicate that it has message or not.",
+      "required": true
+    },
+    "message": {
+      "type": "string",
+      "description": "message."
+    },
+    "creationInstant": {
+      "type": "number",
+      "description": "creation instant",
+      "required": true
+    }
+  }
+}

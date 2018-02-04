@@ -1,0 +1,20 @@
+{
+  "id": "http://api.flybit.com/schema/entity",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "description": "base entity",
+  "definitions": {
+    "resource": {
+      "id": "entity",
+      "type": "object",
+      "description": "A basic entity.",
+      "properties": {
+        "version": {
+          "type": "number",
+          "maxLength": 2147483647,
+          "description": "The time, in milliseconds since the epoch, when this entity was updated.",
+          "required": true
+        }
+      }
+    }
+  }
+}
